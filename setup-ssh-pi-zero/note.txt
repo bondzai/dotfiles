@@ -1,0 +1,3 @@
+hostname=pizero
+user=root
+password=1234
