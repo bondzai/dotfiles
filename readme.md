@@ -1,1 +1,1 @@
-# Automate GNU / Linux command  
+# My Linux machine configuration template files  
