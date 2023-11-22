@@ -60,7 +60,11 @@ mgitclone() {
 
     read -p "Enter the repository name: " repo_name
 
-    clone_command="git clone https://$USERNAME:$PAT@github.com/swift-dynamics/$repo_name.git"
+    clone_command="git clone — recurse-submodules https://$USERNAME:$PAT@github.com/swift-dynamics/$repo_name.git"
 
     $clone_command
+}
+
+mgit_sub_module() {
+    git submodule init && git submodule update
 }
