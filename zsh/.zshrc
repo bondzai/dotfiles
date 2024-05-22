@@ -2,7 +2,7 @@
 
 # Set ZSH and theme
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="archcraft"
+ZSH_THEME="arrow"
 
 # Enable Wakatime project detection
 export ZSH_WAKATIME_PROJECT_DETECTION=true
@@ -23,8 +23,10 @@ plugins=(
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
 
-# Load version manager configurations
-source $HOME/.zshrc_vms
+# Load configure from other modules
+source $HOME/.dotfiles/zsh/.zsh_aliases
+source $HOME/.dotfiles/zsh/.zshrc_vms
+source $HOME/.dotfiles/zsh/.zsh_functions
 
-# Load custom aliases
-source $HOME/.zshrc_aliases
+# Other Zsh settings
+export PATH="$HOME/bin:/usr/local/bin:$PATH"

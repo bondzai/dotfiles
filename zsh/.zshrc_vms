@@ -1,3 +1,4 @@
+# shellcheck disable=SC2148
 # ~/.zshrc_version_managers
 
 # GVM configuration
