@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Close any open System Preferences panes to prevent them from overriding settings
+osascript -e 'tell application "System Preferences" to quit'
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show hidden files by default
+defaults write com.apple.Finder AppleShowAllFiles -bool true
+
+# Use list view in all Finder windows by default
+defaults write com.apple.finder FXPreferredViewStyle Nlsv
+
+# Save screenshots to the Downloads folder
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
+# Disable shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# Restart Finder to apply changes
+killall Finder
